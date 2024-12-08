@@ -20,7 +20,7 @@ interface ChatListProps {
 export function ChatList({ chats, selectedId, onSelect }: ChatListProps) {
   return (
     <ScrollArea className="h-full">
-      <div className="flex flex-col gap-1 p-2">
+      <ul className="flex flex-col gap-1 p-2 jun-sidebarMenu">
         {chats.map((chat) => (
           <ChatItem
             key={chat.id}
@@ -29,7 +29,7 @@ export function ChatList({ chats, selectedId, onSelect }: ChatListProps) {
             onClick={() => onSelect?.(chat.id)}
           />
         ))}
-      </div>
+      </ul>
     </ScrollArea>
   );
 }

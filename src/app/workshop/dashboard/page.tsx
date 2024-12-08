@@ -67,10 +67,10 @@ export default function WorkshopDashboard() {
         jun-edgeSidebar-permanent-autoCollapse-lg
         "
         >
-          <div className="jun-edgeContent ">
+          <div className="jun-edgeContent">
             <div className="jun-sidebarContainer">
               {menuGroups.map((group) => (
-                <div key={group.label} className="jun-sidebarGroup ">
+                <div key={group.label} className="jun-sidebarGroup">
                   <div className="jun-sidebarGroupLabel">{group.label}</div>
                   <ul className="jun-sidebarMenu">
                     {group.items.map((menu) => {
