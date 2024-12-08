@@ -20,16 +20,18 @@ interface ChatListProps {
 export function ChatList({ chats, selectedId, onSelect }: ChatListProps) {
   return (
     <ScrollArea className="h-full">
-      <ul className="flex flex-col gap-1 p-2 jun-sidebarMenu">
-        {chats.map((chat) => (
-          <ChatItem
-            key={chat.id}
-            chat={chat}
-            selected={chat.id === selectedId}
-            onClick={() => onSelect?.(chat.id)}
-          />
-        ))}
-      </ul>
+      <div className="jun-sidebarContainer jun-sidebarContainer-shrink-[200px]">
+        <ul className="flex flex-col gap-1 p-2 jun-sidebarMenu">
+          {chats.map((chat) => (
+            <ChatItem
+              key={chat.id}
+              chat={chat}
+              selected={chat.id === selectedId}
+              onClick={() => onSelect?.(chat.id)}
+            />
+          ))}
+        </ul>
+      </div>
     </ScrollArea>
   );
 }

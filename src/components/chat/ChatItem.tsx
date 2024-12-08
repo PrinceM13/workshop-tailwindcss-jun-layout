@@ -27,7 +27,7 @@ export function ChatItem({ chat, selected, onClick }: ChatItemProps) {
             onClick={onClick}
             className={cn(
               "flex items-center gap-3 w-full p-3 rounded-lg text-left",
-              "hover:bg-accent jun-sidebarMenuButton",
+              "hover:bg-accent jun-sidebarMenuButton jun-sidebarMenuButton-spacing-3",
               selected && "bg-accent"
             )}
           >
@@ -40,7 +40,7 @@ export function ChatItem({ chat, selected, onClick }: ChatItemProps) {
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-background" />
               )}
             </div>
-            <div className="flex-1 overflow-hidden jun-sidebarText w-0">
+            <div className="flex-1 overflow-hidden jun-sidebarText">
               <div className="flex items-center justify-between">
                 <span className="font-medium">{chat.name}</span>
                 <span className="text-xs text-muted-foreground">{chat.timestamp}</span>
